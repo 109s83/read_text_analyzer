@@ -1,3 +1,11 @@
+"""텍스트 파일을 입력받아 분석 결과를 출력하는 예시 스크립트.
+
+사용자가 입력한 .txt 파일을 읽어서, 단어 수, 해시태그 개수,
+멘션 개수, 자주 등장하는 단어를 계산하여 출력한다.
+
+실행 방법:
+    python analyze.py
+"""
 from text_analyzer.subclass import Tweet
 from text_analyzer.utils import load_text_from_file
 
