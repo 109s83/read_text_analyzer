@@ -18,9 +18,13 @@ class Document:
 
         :param text: 분리할 텍스트
         :return: 단어들의 리스트
+
         예시
+
         >>> Document("Hello World")._tokenize("Hello World")
         ['hello', 'world']
+
+        설명:Document(괄호안에들어온 문장)을 _tokenize가 단어별로 쪼개어준다. 그리고 소문자로 바꿔준다.
         """
         return text.lower().split()
 
@@ -29,9 +33,11 @@ class Document:
 
         :return: 단어 개수
         예시
+
         >>> Document("Hello World").word_count()
         2
-        """
+
+        설명:Document(괄호안에들어온 문장)의 토큰리스트의 길이를 보여준다.       """
         return len(self.tokens)
 
     def most_common_words(self, n=5):
@@ -39,8 +45,12 @@ class Document:
 
         :param n: 반환할 단어 개수 (기본값 5)
         :return: (단어, 빈도수) 튜플의 리스트
+
         예시
+
         >>> Document("a a b").most_common_words(1)
         [('a', 2)]
+
+        설명:Document(괄호안에들어온 문장)의 토큰리스트에서 가장 많이 등장하는 단어를 n개 보여준다. 반환된 값은 [('a', 2)]로 a가 2번 나왔다는 뜻이다.
         """
         return Counter(self.tokens).most_common(n)
