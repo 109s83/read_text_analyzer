@@ -33,3 +33,4 @@ class Tweet(Document):
         2
         """
         return sum(1 for word in self.tokens if word.startswith('@'))
+    
