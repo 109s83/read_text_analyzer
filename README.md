@@ -51,3 +51,4 @@ python -m pytest -v
 - 이름: 이수정
 - 학번: 202620882
 - 이메일: soojeong@kku.ac.kr
+- Github URL : https://github.com/109s83/read_text_analyzer.git
